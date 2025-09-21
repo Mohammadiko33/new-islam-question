@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("../base/fonts/") format("woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("../base/fonts/Vazir-Medium-FD-WOL.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("../base/fonts/Vazir-Light-FD-WOL.woff2") format("woff2");
+  font-weight: 300;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Vazir", sans-serif;
+  background: linear-gradient(to bottom right, #f9f9f9, #e0f7fa);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+button {
+  font-family: "Vazir", sans-serif;
+}
+
+.slider-container {
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh; /* حداکثر ارتفاع 80٪ از ارتفاع صفحه */
+    background: white;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* برای خود کانتینر */
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide {
+    display: block;
+    font-size: 1.2em;
+    line-height: 2em;
+    animation: floatText 5s ease-in-out infinite alternate;
+    overflow-y: auto; 
+    max-height: 60vh; 
+    border-block: 2px solid #dddddd54;
+    border-radius: 1rem;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+
+.active {
+  display: block;
+}
+
+@keyframes floatText {
+  0% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+.button-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-btn,
+.prev-btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(45deg, #00bcd4, #4caf50);
+  color: white;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.next-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.next-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.prev-btn {
+  background: linear-gradient(45deg, #ff8a65, #f44336);
+}
+.prev-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.prev-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+
+
+@media(max-width:600px) {
+    .slider-container {
+        margin: 0 15px;  /* مارجین چپ و راست برای موبایل */
+        padding: 20px;   /* پدینگ عمومی داخلی باکس */
+        max-height: 80vh;  
+    }
+
+    .slide {
+        font-size: 1em;
+        max-height: 60vh; 
+        overflow-y: auto; 
+    }
+
+    .next-btn,
+    .prev-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
