@@ -1,0 +1,455 @@
+/* -------------------------------
+   فونت وزیر (۳ وزن مختلف)
+--------------------------------*/
+@font-face {
+  font-family: "Vazir";
+  src: url("./fonts/Vazir-Light-FD-WOL.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazir";
+  src: url("./fonts/Vazir-Medium-FD-WOL.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazir";
+  src: url("./fonts/Vazir-Bold-FD-WOL.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* -------------------------------
+   ریست و بیس
+--------------------------------*/
+
+:root {
+  --body: #f6f7fb;
+  --background: #fff;
+  --text: #222222;
+  --green: #00d492; /* text-emerald-400 */
+  --red: #ff6467; /* text-red-400 */
+  --blue-link: #51a2ff; /* text-blue-400 */
+  --gray-border: #e9eef5;
+  --shadow-8: rgba(0, 0, 0, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Vazir", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  background: var(--body);
+  color: var(--text);
+}
+
+img {
+  border-radius: 1rem;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  border: none;
+  outline: none;
+  background: none;
+}
+button {
+  cursor: pointer;
+}
+
+/* -------------------------------
+   کانتینر
+--------------------------------*/
+.container {
+  max-width: 994px;
+  margin: 0 auto;
+  padding: 24px 20px 64px;
+}
+
+/* -------------------------------
+   تایپوگرافی
+--------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 12px 0;
+  font-weight: 700;
+  color: var(--text);
+}
+h1 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+h2 {
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+}
+h3 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+h4{
+  font-size: 19px;
+}
+p {
+  font-size: 17px;
+  margin: 0.75rem 0;
+  color: var(--text);
+}
+
+/* -------------------------------
+   هدر
+--------------------------------*/
+.page-title {
+  margin: 24px 0 0;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: var(--text);
+  border-right: 6px solid var(--green);
+  padding-right: 10px;
+}
+
+/* -------------------------------
+   کارت
+--------------------------------*/
+.card {
+  width: 100%;
+  background: var(--background);
+  border-radius: 16px;
+  padding: clamp(16px, 2.2vw, 28px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--gray-border);
+  margin-top: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden; /* محتوای داخل هم گرد بشه */
+}
+
+.card video {
+  width: 100%;        /* عرض کامل کانتینر */
+  height: auto;       /* تناسب تصویر */
+  display: block;     
+  border-radius: 16px; /* 👈 گوشه‌های ویدیو هم گرد */
+}
+
+.card--claim {
+  border-right: 6px solid var(--red);
+}
+
+
+.card--answer {
+  border-right: 6px solid var(--green);
+}
+
+/* -------------------------------
+   ویدیو
+--------------------------------*/
+.video-wrapper {
+  margin-top: 22px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 30px var(--shadow-8);
+  border: 1px solid #0b12261a;
+}
+.video-wrapper video {
+  display: block;
+  width: 100%;
+}
+
+/* -------------------------------
+   نوار راهنما/هشدار
+--------------------------------*/
+.watch-hint {
+  display: flex; /* استفاده از flex به جای grid */
+  flex-wrap: nowrap; /* جلوگیری از شکستن خط */
+  align-items: center; /* وسط چین عمودی */
+  justify-content: center; /* وسط چین افقی */
+  gap: 4px; /* فاصله بین آیکون و متن */
+  background: #ebf5ff;
+  color: #0f3973;
+  border-right: 4px solid var(--blue-link);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-top: 14px;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.08);
+  white-space: nowrap; /* جلوگیری از شکستن خط */
+}
+
+/* -------------------------------
+   انیمیشن‌ها
+--------------------------------*/
+.hidden {
+  display: none;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  animation: fadeSlideUp 700ms ease both;
+}
+
+/* -------------------------------
+   تصاویر
+--------------------------------*/
+
+.img-block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ۴ ستون مساوی */
+  gap: 12px;
+  margin: 14px auto;
+  max-width: 1040px; /* همون عرض کانتینر */
+}
+
+.img-block img,
+.image-inside {
+  width: 100%; /* هر تصویر ستون خودش رو پر می‌کنه */
+  max-height: 360px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 24px var(--shadow-8);
+  border: 1px solid var(--gray-border);
+}
+
+/* -------------------------------
+   باکس نکات
+--------------------------------*/
+.extra-box {
+  margin-top: 18px;
+  background: #eaf3ff;
+  border-left: 6px solid var(--blue-link);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 26px rgba(59, 130, 246, 0.12);
+  position: relative;
+}
+.extra-box::before {
+  content: "💡";
+  position: absolute;
+  left: -12px;
+  top: -12px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: var(--blue-link);
+  color: var(--background);
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+  font-size: 1rem;
+}
+.extra-box h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #0f3973;
+}
+.extra-box ul {
+  margin: 0;
+  padding-right: 1.1rem;
+}
+.extra-box li {
+  margin: 0.4rem 0;
+  color: #1e3a8a;
+}
+
+/* -------------------------------
+   دکمه‌ها
+--------------------------------*/
+.btn,
+a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+.btn--primary,
+a {
+  text-decoration: none;
+  transition: all 0.2s ease-in 0.02s;
+  background: var(--blue-link);
+  color: var(--background);
+}
+.btn--primary:hover,
+a:hover {
+  filter: brightness(0.8);
+}
+.btn--success {
+  background: var(--green);
+  color: var(--background);
+}
+.btn--danger {
+  background: var(--red);
+  color: var(--background);
+}
+
+/* -------------------------------
+   Utility classes
+--------------------------------*/
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mt-2 {
+  margin-top: 1rem;
+}
+.mt-3 {
+  margin-top: 1.5rem;
+}
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+}
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+/* -------------------------------
+   واکنش‌گرا
+--------------------------------*/
+
+/* helper class */
+
+.flex {
+  display: flex;
+}
+
+.gap-x-05 {
+  column-gap: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+/* مانیتورهای خیلی بزرگ */
+
+/* دسکتاپ معمولی */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 994px;
+  }
+}
+
+/* تبلت */
+@media (max-width: 1024px) {
+  .img-block {
+    grid-template-columns: repeat(2, 1fr); /* ۲ ستون */
+  }
+
+  .container {
+    max-width: 768px;
+  }
+  .page-title {
+    font-size: 1.5rem;
+  }
+  .card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px 14px 48px;
+  }
+  .img-block img,
+  .image-inside {
+    max-width: 88%;
+  }
+  .watch-hint {
+    grid-template-columns: 20px 1fr;
+  }
+  .card {
+    padding: 16px;
+  }
+}
+
+/* موبایل */
+@media (max-width: 480px) {
+  .img-block {
+    grid-template-columns: 1fr; /* ۱ ستون */
+    justify-items: center;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 12px 10px 32px;
+  }
+
+  .page-title {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1080px;
+  }
+  body {
+    font-size: 18px;
+  }
+}

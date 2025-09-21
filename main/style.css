@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("./fonts/Vazir-Light-FD-WOL.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Vazir-bold";
+  src: url("./fonts/Vazir-Medium-FD-WOL.woff2") format("woff2");
+}
+
+:root {
+  --body: #f6f7fb;
+  --text: #ecfd00;
+  --green-btn: #dcfce7;
+  --green-btn-text: #00c950;
+  --red-btn: #ffe2e2;
+  --red-btn-text: #fb2c36;
+}
+
+body {
+  font-family: "Vazir", Arial, sans-serif;
+  background-color: var(--body);
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  text-align: right;
+}
+
+* {
+  font-family: "Vazir", Arial, sans-serif;
+}
+
+button,
+input {
+  font-family: "Vazir-bold", Arial, sans-serif;
+}
+
+.title {
+  font-size: 28px;
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 10px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 280px;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.025);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item:hover img {
+  filter: blur(1px);
+}
+
+@media only screen and (min-width: 768px) {
+  .item:hover {
+    transform: scale(1.05);
+  }
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: blur(4px);
+  transition: all 0.15s ease-in-out 0.02s;
+}
+
+.gradient {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  transform: translateY(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  color: var(--text);
+  text-shadow: 1px 1px 1rem #333;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.like-btn,
+.dislike-btn {
+  background-color: var(--green-btn);
+  color: var(--green-btn-text);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out 0.02s;
+  box-shadow: 1px 1px 8px var(--green-btn);
+}
+
+.dislike-btn {
+  background-color: var(--red-btn);
+  color: var(--red-btn-text);
+  box-shadow: 1px 1px 8px var(--red-btn);
+}
+
+.like-btn:hover {
+  background-color: var(--green-btn-text);
+  color: var(--green-btn);
+  box-shadow: 1px 1px 8px var(--green-btn-text);
+}
+.dislike-btn:hover {
+  background-color: var(--red-btn-text);
+  color: var(--red-btn);
+  box-shadow: 1px 1px 8px var(--red-btn-text);
+}
+
+/* ریسپانسیو */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

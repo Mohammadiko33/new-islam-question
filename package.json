@@ -1,0 +1,22 @@
+{
+  "name": "questions-islam2",
+  "version": "1.0.0",
+  "description": "این پروژه مجموعه‌ای از پرسش‌ها و ابهام‌های رایج پیرامون اسلام را گردآوری می‌کند.  \r هدف اصلی، ایجاد یک فضای پژوهشی و مستند است؛ جایی برای طرح پرسش، بررسی دیدگاه‌ها  \r و آشنایی با منابع مختلف بدون پیش‌داوری یا جانبداری.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./base/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohammadiko33/Questions-islam2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Mohammadiko33/Questions-islam2/issues"
+  },
+  "homepage": "https://github.com/Mohammadiko33/Questions-islam2/"
+}
