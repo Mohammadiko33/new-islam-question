@@ -44,8 +44,7 @@ function getRandomGreeting() {
   return greetings[Math.floor(Math.random() * greetings.length)];
 }
 
-const posts = [
-  {
+const posts = [{
     id: 1,
     title: "در تاریخ پیامبر اسلام وجود ندارد",
     cover: "../main/routes/muhammad-is-not-in-history/evidence/1.png",
@@ -343,18 +342,58 @@ const posts = [
   },
   {
     id: 50,
-    title: "سوتی قرآن بارش تگرگ از کوه ها",
-    link: "../main/routes/routes/quran-verse-tagarg/response.html",
-    cover:
-      "../new-islam-Question/new-islam-Question/quran-verse-tagarg/cover.jpg",
-    //  "./quran-verse-tagarg/cover.jpg"
+    title: "محدودیتی به اسم حجاب",
+    link: "../main/routes/hijab/response.html",
+    cover: "../main/routes/hijab/cover.jpg"
   },
-  // {
-  //   id: 35,
-  //   title: "اشتباه بزرگ قرآن درباره غروب خورشید",
-  //   link: "../main/routes/sun-in-sea/response.html",
-  //   cover: "../main/routes/sun-in-sea/cover.jpg"
-  // },
+  {
+    id: 51,
+    title: "دو تا قرآن متفاوت",
+    link: "../main/routes/two-diffrend-quran/response.html",
+    cover: "../main/routes/two-diffrend-quran/cover.jpg"
+  },
+  {
+    id: 52,
+    title: "شکست قرآن در مقابل علم",
+    link: "../main/routes/sun-moving/response.html",
+    cover: "../main/routes/sun-moving/cover.jpg"
+  },
+  {
+    id: 53,
+    title: "چرا دیه زن نصف مرده",
+    link: "../main/routes/die-woman/response.html",
+    cover: "../main/routes/die-woman/cover.jpg"
+  },
+  {
+    id: 54,
+    title: "از عجایب خلقت آسمان و زمین",
+    link: "../main/routes/funny-rules-islam/response.html",
+    cover: "../main/routes/funny-rules-islam/cover.jpg"
+  },
+  {
+    id: 55,
+    title: "زناتونو بزنید ،دستور عجیب قرآن",
+    link: "../main/routes/kick-your-wife-in-quran/response.html",
+    cover: "../main/routes/kick-your-wife-in-quran/cover.jpg"
+  },
+  {
+    id: 56,
+    title: "ازدواج پیامبر با زن یهود",
+    link: "../main/routes/married-muhammad-woman-jews/response.html",
+    cover: "../main/routes/married-muhammad-woman-jews/cover.jpg"
+  },
+  {
+    id: 57,
+    title: "نماز یا ذات پاک ؟",
+    link: "../main/routes/namaz-zat/response.html",
+    cover: "../main/routes/namaz-zat/cover.jpg"
+  },
+  {
+    id: 58,
+    title: "قهرمانان شاهنامه یا کوروش 2",
+    link: "../main/routes/real-superhiro-quran-or-shahnameh2/response.html",
+    cover: "../main/routes/real-superhiro-quran-or-shahnameh2/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");

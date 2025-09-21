@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Vazir";
-  src: url("../base/fonts/") format("woff2");
+  src: url("../main/fonts/") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Vazir";
-  src: url("../base/fonts/Vazir-Medium-FD-WOL.woff2") format("woff2");
+  src: url("../main/fonts/Vazir-Medium-FD-WOL.woff2") format("woff2");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Vazir";
-  src: url("../base/fonts/Vazir-Light-FD-WOL.woff2") format("woff2");
+  src: url("../main/fonts/Vazir-Light-FD-WOL.woff2") format("woff2");
   font-weight: 300;
 }
 

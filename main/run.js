@@ -14,8 +14,6 @@ function ask(question) {
 }
 
 async function main() {
-  const validModes = ["normal", "chat", "videostepbystep"];
-
   const ready = await ask("Is your README.md ready? (y/n): ");
   if (ready.toLowerCase() !== "y") {
     console.log("❌ Create README.md before run the command.");
@@ -23,11 +21,9 @@ async function main() {
     return;
   }
 
-  let mode = (await ask("Enter mode (normal/chat/videoStepbyStep): ")).toLowerCase();
-  if (!validModes.includes(mode)) {
-    console.log("❌ Invalid mode. Please choose one of:", validModes.join(", "));
-    rl.close();
-    return;
+  let mode = (await ask("Enter mode (normal/chat): ")).toLowerCase();
+  if (mode !== "chat") {
+    mode = "normal"; // هر چیز دیگه‌ای به عنوان normal در نظر گرفته می‌شود
   }
 
   const videoId = await ask("Enter videoId: ");
@@ -38,7 +34,6 @@ async function main() {
   }
 
   const titleHTML = await ask("Enter titleHTML : ");
-  const extraBoxContent = await ask("Enter extraBoxContent (optional): ");
 
   rl.close();
 
@@ -47,7 +42,6 @@ async function main() {
       mode,
       videoId,
       titleHTML,
-      extraBoxContent,
     });
   } catch (err) {
     console.error("❌ Error:", err.message);
