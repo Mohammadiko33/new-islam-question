@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>چت</title>
+  <link rel="stylesheet" href="../../chats/chat.css">
+</head>
+<body>
+  <div class="chat-container" id="chat"></div>
+  <audio id="sendSound" src=" ../../chats/public/get.wav" controls style="display:none;"></audio>
+  <audio id="receiveSound" src=" ../../chats/public/send.mp3" controls style="display:none;"></audio>
+  <script src="../../chats/chat.js"></script>
+  <script>
+    const messages = [
+  {
+    "sender": "other",
+    "text": "شما مسلمونا من موندم که خودتون خندتون نمیگیره",
+    "readTime": 2400
+  },
+  {
+    "sender": "me",
+    "text": "چرا خندمون بگیره ؟",
+    "readTime": 1200
+  },
+  {
+    "sender": "other",
+    "text": "بخاطر این مثل های کشکی و مزخرفی که قرآن تون داره به دست شما میده",
+    "readTime": 4500
+  },
+  {
+    "sender": "me",
+    "text": "چه مثالی ؟",
+    "readTime": 900
+  },
+  {
+    "sender": "other",
+    "text": "اومده از یک پشه اسم برده",
+    "readTime": 1800
+  },
+  {
+    "sender": "me",
+    "text": "خب چه اشکالی وجود داره ؟",
+    "readTime": 1800
+  },
+  {
+    "sender": "other",
+    "text": "خب چرا نرفتی از یک دایناسور اسم ببری ؟ از این حیوونای ته اقیانوس چرا اسم نبردی ؟",
+    "readTime": 5400
+  },
+  {
+    "sender": "other",
+    "text": "خب معلومه دیگه پیامبر تون نشسته به اصحابش وعظ می کرده ، پشه اومده نیشش زده",
+    "readTime": 4800
+  },
+  {
+    "sender": "other",
+    "text": "گفته چه بهتر همینو من بیام پروژه اش کنم واسه اینا",
+    "readTime": 3300
+  },
+  {
+    "sender": "other",
+    "text": "خب واقعا خنده داره",
+    "readTime": 1200
+  },
+  {
+    "sender": "me",
+    "text": "ببین دوست عزیز پشه یکی از خاص ترین موجودات کره زمینه همه موجودات کره زمین دارای دو چشم یا سه چشم هستن اما پشه دارای 100 تا چشمه",
+    "readTime": 8400
+  },
+  {
+    "sender": "me",
+    "text": "شما میدونید پشه آزمایشگاه سیار داره؟ شما میدونید پشه مجهز به راداره ؟ شما میدونید پشه مجهز به دوربین دید در شبه ؟ شما میدونید زمانی که پشه میخاد یک فرد رو نیش بزنه میاد از اون خونش نمونه گیری می کنه با اون آزمایشگاه سیاری که داره ؟",
+    "readTime": 14700
+  },
+  {
+    "sender": "me",
+    "text": "اگر خون مناسبش بود از اون خون میمکه",
+    "readTime": 2400
+  },
+  {
+    "sender": "me",
+    "text": "آیا نمیخای باور بکنید کلام خدا هستش ؟",
+    "readTime": 2400
+  },
+  {
+    "sender": "other",
+    "text": "اصلا حرف شما قبول گیریمم که آقا این پشه یک چیز خاص باشه خوب اون چیه که میگه روی این پشه هستش ؟",
+    "readTime": 6900
+  },
+  {
+    "sender": "other",
+    "text": "او چیز هایی که بر بالای پشه هست برای این چی داری بگی ؟",
+    "readTime": 4200
+  },
+  {
+    "sender": "other",
+    "text": "این که واقعا خنده داره",
+    "readTime": 1500
+  },
+  {
+    "sender": "me",
+    "text": "دانشمندان بعد از 1400 سال طبق تحقیقاتی که داشتند با دستگاه های پیشرفته مثل میکروسکوپ متوجه شدند حشرات زنده ای روی پشه وجود دارند که بهشون میگن مایت از نظر علمی",
+    "readTime": 9300
+  },
+  {
+    "sender": "me",
+    "text": "mite که کنه ریز گفته میشه و این ها از خون پشه تغذیه می کنن",
+    "readTime": 4500
+  },
+  {
+    "sender": "me",
+    "text": "<img src=\"./evidence.png\" alt=\"mite\">",
+    "readTime": 900
+  },
+  {
+    "sender": "me",
+    "text": "برای این چی دارید بگید ؟",
+    "readTime": 1800
+  },
+  {
+    "sender": "me",
+    "text": "آیا پیامبرمان اون زمان می تونسته با چشم غیر مسلح این حشرات رو ببینه ؟",
+    "readTime": 4500
+  },
+  {
+    "sender": "me",
+    "text": "این مثال یک مثال خیلی بارزه و این قطعا اعجاز قرآنه",
+    "readTime": 3300
+  },
+  {
+    "sender": "me",
+    "text": "آیا وقت اون نرسیده تا ایمان بیاریم به پروردگار ؟",
+    "readTime": 3000
+  }
+];
+    initChat(messages);
+  </script>
+</body>
+</html>
