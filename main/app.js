@@ -366,7 +366,7 @@ const posts = [{
   },
   {
     id: 54,
-    title: "از عجایب خلقت آسمان و زمین",
+    title: "از عجایب خالق آسمان و زمین",
     link: "main/routes/funny-rules-islam/response.html",
     cover: "main/routes/funny-rules-islam/cover.jpg"
   },
