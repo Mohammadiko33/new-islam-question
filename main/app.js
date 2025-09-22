@@ -390,7 +390,7 @@ const posts = [{
   },
   {
     id: 58,
-    title: "قهرمانان شاهنامه یا کوروش 2",
+    title: "قهرمانان شاهنامه یا قرآن 2",
     link: "main/routes//real-superhiro-quran-or-shahnameh2/response.html",
     cover: "main/routes//real-superhiro-quran-or-shahnameh2/cover.jpg"
   },
