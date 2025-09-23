@@ -400,7 +400,12 @@ const posts = [{
     link: "main/routes/kids-divorce/response.html",
     cover: "main/routes/kids-divorce/cover.jpg"
   },
-  
+  {
+    id: 60,
+    title: "اشتباه علمی قران درمورد پوست انسان",
+    link: "../main/routes/skin-change/response.html",
+    cover: "../main/routes/skin-change/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");
