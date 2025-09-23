@@ -412,6 +412,12 @@ const posts = [{
     link: "main/routes/result-before-born/response.html",
     cover: "main/routes/result-before-born/cover.jpg"
   },
+  {
+    id: 62,
+    title: "تا حالا دقت کردین هر چی بی پول و فقیره، مذهبی و دینداره",
+    link: "main/routes/muslims-are-poor/response.html",
+    cover: "main/routes/muslims-are-poor/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");
