@@ -430,6 +430,12 @@ const posts = [{
     link: "main/routes/verse-ball-circle/response.html",
     cover: "main/routes/verse-ball-circle/cover.jpg"
   },
+  {
+    id: 65,
+    title: "آیا محمد پیامبره ؟",
+    link: "main/routes/is-it-muhammad-real-messager/response.html",
+    cover: "main/routes/is-it-muhammad-real-messager/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");
