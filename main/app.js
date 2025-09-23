@@ -403,14 +403,14 @@ const posts = [{
   {
     id: 60,
     title: "اشتباه علمی قران درمورد پوست انسان",
-    link: "../main/routes/skin-change/response.html",
-    cover: "../main/routes/skin-change/cover.jpg"
+    link: "main/routes/skin-change/response.html",
+    cover: "main/routes/skin-change/cover.jpg"
   },
   {
     id: 61,
     title: "آیا سرنوشت آدم ها از قبل نوشته شده",
-    link: "../main/routes/result-before-born/response.html",
-    cover: "../main/routes/result-before-born/cover.jpg"
+    link: "main/routes/result-before-born/response.html",
+    cover: "main/routes/result-before-born/cover.jpg"
   },
 ];
 

@@ -29,8 +29,8 @@ function addPostToAppJs({ videoId, titleHTML }) {
   {
     id: ${newId},
     title: "${titleHTML}",
-    link: "../main/routes/${videoId}/response.html",
-    cover: "../main/routes/${videoId}/cover.jpg"
+    link: "main/routes/${videoId}/response.html",
+    cover: "main/routes/${videoId}/cover.jpg"
   }`;
 
   if (postsContent.endsWith(",")) {
