@@ -394,6 +394,13 @@ const posts = [{
     link: "main/routes/real-superhiro-quran-or-shahnameh2/response.html",
     cover: "main/routes/real-superhiro-quran-or-shahnameh2/cover.jpg"
   },
+  {
+    id: 59,
+    title: "کودک همسری در قرآن",
+    link: "main/routes/kids-divorce/response.html",
+    cover: "main/routes/kids-divorce/cover.jpg"
+  },
+  
 ];
 
 const container = document.querySelector(".container");
