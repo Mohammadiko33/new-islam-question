@@ -406,6 +406,12 @@ const posts = [{
     link: "../main/routes/skin-change/response.html",
     cover: "../main/routes/skin-change/cover.jpg"
   },
+  {
+    id: 61,
+    title: "آیا سرنوشت آدم ها از قبل نوشته شده",
+    link: "../main/routes/result-before-born/response.html",
+    cover: "../main/routes/result-before-born/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");
