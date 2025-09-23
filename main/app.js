@@ -436,6 +436,12 @@ const posts = [{
     link: "main/routes/is-it-muhammad-real-messager/response.html",
     cover: "main/routes/is-it-muhammad-real-messager/cover.jpg"
   },
+  {
+    id: 66,
+    title: "این اسلام واقعی کجاست ؟",
+    link: "main/routes/islamic-envoy/response.html",
+    cover: "main/routes/islamic-envoy/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");
