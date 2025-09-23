@@ -424,6 +424,12 @@ const posts = [{
     link: "main/routes/muslims-are-poor/response.html",
     cover: "main/routes/muslims-are-poor/cover.jpg"
   },
+  {
+    id: 64,
+    title: "شکست قران ، سوره توپ قلقلی",
+    link: "main/routes/verse-ball-circle/response.html",
+    cover: "main/routes/verse-ball-circle/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");
