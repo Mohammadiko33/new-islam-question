@@ -1,7 +1,7 @@
 # 🕵️‍♂️📜🔍 پرسش‌هایی درباره اسلام
 
 پروژه که در تلگرام ویدیو ها اپلود میشه
-https://t.me/question_islam
+https://t.me/questions_islam
 
 ---
 
@@ -37,16 +37,4 @@ https://t.me/question_islam
 1 : create folder with name in root
 2 : create and put README.md inside folder
 3 : run command **npm run dev**
-
-no extra box in :
-empty quran
-Behasht-in-qatar
-fly-in-drink-muhammad-say
-forty-daughters-of-Fahraj
-muhammad-is-not-in-history
-Marred-Muhammad-with-girl-9year-old
-Khosrow-Parviz's-response-to-Muhammad's-letter
-Jesus-vs-Muhammad
-Behasht-in-qatar
-human-talk-ant
  -->

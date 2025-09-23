@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/Mohammadiko33/Questions-islam2/issues"
   },
-  "homepage": "https://github.com/Mohammadiko33/Questions-islam2/"
+  "homepage": "https://github.com/Mohammadiko33/Questions-islam2/",
+  "dependencies": {
+    "@shoelace-style/shoelace": "^2.20.1",
+    "react-shimmer": "^3.2.0",
+    "swiper": "^12.0.2"
+  }
 }
