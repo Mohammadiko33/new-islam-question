@@ -414,6 +414,12 @@ const posts = [{
   },
   {
     id: 62,
+    title: "تناقضات علمی قرآن، همه چیز را زوج آفریده",
+    link: "main/routes/everything-is-pair/response.html",
+    cover: "main/routes/everything-is-pair/cover.jpg"
+  },
+  {
+    id: 63,
     title: "تا حالا دقت کردین هر چی بی پول و فقیره، مذهبی و دینداره",
     link: "main/routes/muslims-are-poor/response.html",
     cover: "main/routes/muslims-are-poor/cover.jpg"
