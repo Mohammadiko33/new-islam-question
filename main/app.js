@@ -454,6 +454,36 @@ const posts = [{
     link: "main/routes/nymph-and-liquor/response.html",
     cover: "main/routes/nymph-and-liquor/cover.jpg"
   },
+  {
+    id: 69,
+    title: "دعا یا دکتر ؟",
+    link: "main/routes/science-or-religion/response.html",
+    cover: "main/routes/science-or-religion/cover.jpg"
+  },
+  {
+    id: 70,
+    title: "معجزه دروغین آهن در قرآن",
+    link: "main/routes/foregin-iron/response.html",
+    cover: "main/routes/foregin-iron/cover.jpg"
+  },
+  {
+    id: 71,
+    title: "بچه ها روزی میارن",
+    link: "main/routes/child-have-money/response.html",
+    cover: "main/routes/child-have-money/cover.jpg"
+  },
+  {
+    id: 72,
+    title: "کی این همه جهان رو ساخته",
+    link: "main/routes/who-create-worlds/response.html",
+    cover: "main/routes/who-create-worlds/cover.jpg"
+  },
+  {
+    id: 73,
+    title: "دروغ مسلمون ها در شهادتین",
+    link: "main/routes/shahadat-without-see/response.html",
+    cover: "main/routes/shahadat-without-see/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");
