@@ -484,6 +484,12 @@ const posts = [{
     link: "main/routes/shahadat-without-see/response.html",
     cover: "main/routes/shahadat-without-see/cover.jpg"
   },
+  {
+    id: 74,
+    title: "اسلام اوردن ایرانی ها با زور شمشیره",
+    link: "main/routes/iran-islam-sword/response.html",
+    cover: "main/routes/iran-islam-sword/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");
