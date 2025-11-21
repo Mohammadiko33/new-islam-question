@@ -490,6 +490,30 @@ const posts = [{
     link: "main/routes/iran-islam-sword/response.html",
     cover: "main/routes/iran-islam-sword/cover.jpg"
   },
+  {
+    id: 75,
+    title: "تمام بدبختی ها از بهشته",
+    link: "main/routes/all-Misery-from-Paradise/response.html",
+    cover: "main/routes/all-Misery-from-Paradise/cover.jpg"
+  },
+  {
+    id: 76,
+    title: "کشتن ادم صفت مسلمان است",
+    link: "main/routes/muslims-are-Killers/response.html",
+    cover: "main/routes/muslims-are-Killers/cover.jpg"
+  },
+  {
+    id: 77,
+    title: "قرآن سخن کیست",
+    link: "main/routes/quran-from-who/response.html",
+    cover: "main/routes/quran-from-who/cover.jpg"
+  },
+  {
+    id: 78,
+    title: "قبله درست کردم طرفه",
+    link: "main/routes/where-is-the-Qiblah/response.html",
+    cover: "main/routes/where-is-the-Qiblah/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");
