@@ -510,7 +510,7 @@ const posts = [{
   },
   {
     id: 78,
-    title: "قبله درست کردم طرفه",
+    title: "قبله درست کدوم طرفه",
     link: "main/routes/where-is-the-Qiblah/response.html",
     cover: "main/routes/where-is-the-Qiblah/cover.jpg"
   },

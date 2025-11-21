@@ -34,8 +34,106 @@
   --green: #00d492; /* text-emerald-400 */
   --red: #ff6467; /* text-red-400 */
   --blue-link: #51a2ff; /* text-blue-400 */
+  /* extra-box palette (light mode) */
+  --extra-bg: #f3f6ff; /* soft, very light blue */
+  --extra-border: #6366f1; /* indigo-500 */
+  --extra-text: #0f3a73; /* dark indigo for headings */
   --gray-border: #e9eef5;
   --shadow-8: rgba(0, 0, 0, 0.08);
+}
+
+/* Smooth theme transitions */
+html {
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
+/* Dark theme (toggle by setting `data-theme="dark"` on <html>) */
+[data-theme="dark"] {
+  --body: #07080b; /* page background */
+  --background: #0f1724; /* card backgrounds */
+  --text: #e6eef8; /* main text */
+  --green: #1dd3a7;
+  --red: #ff7b7b;
+  --blue-link: #5fb0ff;
+  --gray-border: rgba(255,255,255,0.06);
+  --shadow-8: rgba(2,6,23,0.6);
+}
+
+/* Extra-box: modern, engineered look (light + dark) */
+.extra-box {
+  margin-top: 18px;
+  border-radius: 14px;
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+
+  /* frosted, subtle gradient to add depth */
+  background: linear-gradient(180deg, var(--extra-bg) 0%, rgba(255,255,255,0.6) 100%);
+  border-left: 6px solid var(--extra-border);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  transition: transform 200ms ease, box-shadow 200ms ease, background 220ms ease;
+}
+.extra-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.12);
+}
+
+.extra-box::before {
+  content: "💡";
+  position: absolute;
+  left: -14px;
+  top: -14px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--extra-border), color-mix(in srgb, var(--extra-border) 70%, #ffffff));
+  color: var(--background);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(16,24,40,0.08);
+  font-size: 1.05rem;
+  transform: rotate(-8deg);
+}
+
+.extra-box h2 {
+  margin: 0 0 10px 0;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--extra-text);
+  letter-spacing: 0.2px;
+}
+.extra-box ul {
+  margin: 0;
+  padding-right: 1.1rem;
+}
+.extra-box li {
+  margin: 0.45rem 0;
+  color: color-mix(in srgb, var(--extra-text) 65%, #000 35%);
+}
+
+/* Dark mode tweaks: subtler, Tailwind-like indigo/sky tones */
+[data-theme="dark"] {
+  --extra-bg: rgba(15, 23, 42, 0.42); /* deep, slightly bluish */
+  --extra-border: rgba(99,102,241,0.18); /* soft indigo */
+  --extra-text: #cfe8ff;
+}
+
+[data-theme="dark"] .extra-box {
+  /* frosted glass feel */
+  background: linear-gradient(180deg, rgba(15,23,42,0.45) 0%, rgba(8,12,22,0.35) 100%);
+  border-left-color: var(--extra-border);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  backdrop-filter: blur(6px) saturate(120%);
+}
+
+[data-theme="dark"] .extra-box::before {
+  background: linear-gradient(135deg, rgba(99,102,241,0.9), rgba(79,143,255,0.9));
+  color: var(--background);
+  box-shadow: 0 8px 20px rgba(2,6,23,0.45);
+}
+
+[data-theme="dark"] .extra-box h2 {
+  color: var(--extra-text);
 }
 
 *,
@@ -245,9 +343,9 @@ p {
   max-height: 360px;
   object-fit: contain;
   border-radius: 12px;
-  background: #fff;
+  background: transparent; /* use transparent so dark theme doesn't show white box */
   box-shadow: 0 8px 24px var(--shadow-8);
-  border: 1px solid var(--gray-border);
+  border: none; /* remove white border around images */
 }
 
 /* -------------------------------
@@ -320,6 +418,52 @@ a:hover {
 .btn--danger {
   background: var(--red);
   color: var(--background);
+}
+
+/* Theme toggle floating button */
+.theme-toggle {
+  position: fixed;
+  top: 14px;
+  left: 14px; /* left is fine for RTL pages so it doesn't overlap content */
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--background);
+  color: var(--text);
+  box-shadow: 0 8px 24px var(--shadow-8);
+  border: 1px solid var(--gray-border);
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+}
+.theme-toggle:hover {
+  transform: translateY(-3px);
+}
+.theme-toggle:active {
+  transform: translateY(-1px) scale(0.99);
+}
+.theme-toggle .label {
+  display: none; /* label used for accessibility only, icon visible */
+}
+
+/* Inline toggle placed under page titles */
+.theme-toggle-inline {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid var(--gray-border);
+  box-shadow: 0 6px 18px var(--shadow-8);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 160ms ease, transform 120ms ease;
+}
+.theme-toggle-inline:hover {
+  transform: translateY(-2px);
 }
 
 /* -------------------------------
@@ -449,4 +593,10 @@ a:hover {
   body {
     font-size: 18px;
   }
+}
+
+/* Ensure background and text use vars so theme applies globally */
+body {
+  background: var(--body);
+  color: var(--text);
 }
