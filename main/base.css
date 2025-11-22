@@ -36,8 +36,8 @@
   --blue-link: #51a2ff; /* text-blue-400 */
   /* extra-box palette (light mode) */
   --extra-bg: #f3f6ff; /* soft, very light blue */
-  --extra-border: #6366f1; /* indigo-500 */
-  --extra-text: #0f3a73; /* dark indigo for headings */
+  --extra-border: oklch(87.9% 0.169 91.605); /* warm amber accent */
+  --extra-text: #243244; /* slate-ish text for headings */
   --gray-border: #e9eef5;
   --shadow-8: rgba(0, 0, 0, 0.08);
 }
@@ -55,6 +55,9 @@ html {
   --green: #1dd3a7;
   --red: #ff7b7b;
   --blue-link: #5fb0ff;
+  /* Extra-box colors in dark mode set from user-provided OKLCH values */
+  --extra-bg: oklch(25.7% 0.09 281.288);
+  --extra-text: oklch(91.7% 0.08 205.041);
   --gray-border: rgba(255,255,255,0.06);
   --shadow-8: rgba(2,6,23,0.6);
 }
@@ -119,8 +122,8 @@ html {
 }
 
 [data-theme="dark"] .extra-box {
-  /* frosted glass feel */
-  background: linear-gradient(180deg, rgba(15,23,42,0.45) 0%, rgba(8,12,22,0.35) 100%);
+  /* use the user-provided extra-bg color for dark mode for consistent contrast */
+  background: var(--extra-bg);
   border-left-color: var(--extra-border);
   box-shadow: 0 10px 30px rgba(2,6,23,0.6);
   backdrop-filter: blur(6px) saturate(120%);
@@ -349,36 +352,40 @@ p {
 }
 
 /* -------------------------------
-   باکس نکات
+   باکس نکات (بهبود خوانایی و آیکون)
 --------------------------------*/
 .extra-box {
   margin-top: 18px;
-  background: #eaf3ff;
-  border-left: 6px solid var(--blue-link);
+  background: var(--extra-bg);
+  border-left: 6px solid var(--extra-border);
   border-radius: 14px;
-  padding: 16px 18px;
-  box-shadow: 0 8px 26px rgba(59, 130, 246, 0.12);
+  /* leave room on the left for the icon so it's fully visible */
+  padding: 16px 18px 16px 64px;
+  box-shadow: 0 8px 26px rgba(16, 24, 40, 0.06);
   position: relative;
+  overflow: visible;
 }
 .extra-box::before {
   content: "💡";
   position: absolute;
-  left: -12px;
-  top: -12px;
-  width: 34px;
-  height: 34px;
+  /* place the icon fully inside the box */
+  left: 16px;
+  top: 16px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
-  background: var(--blue-link);
+  background: linear-gradient(135deg, var(--extra-border), color-mix(in srgb, var(--extra-border) 70%, #ffffff));
   color: var(--background);
   border-radius: 50%;
-  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
-  font-size: 1rem;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  font-size: 1.25rem;
+  transform: rotate(-6deg);
 }
 .extra-box h2 {
   margin: 0 0 10px;
   font-size: clamp(1rem, 2vw, 1.15rem);
-  color: #0f3973;
+  color: var(--extra-text);
 }
 .extra-box ul {
   margin: 0;
@@ -386,7 +393,21 @@ p {
 }
 .extra-box li {
   margin: 0.4rem 0;
-  color: #1e3a8a;
+  color: color-mix(in srgb, var(--extra-text) 72%, var(--text) 28%);
+}
+
+/* Dark mode overrides for extra-box to keep contrast pleasant */
+[data-theme="dark"] .extra-box {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-left-color: color-mix(in srgb, var(--extra-border) 40%, rgba(255,255,255,0.02) 60%);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.45);
+  backdrop-filter: blur(6px) saturate(120%);
+}
+
+[data-theme="dark"] .extra-box::before {
+  background: linear-gradient(135deg, rgba(245,184,0,0.95), rgba(255,206,84,0.95));
+  color: var(--background);
+  box-shadow: 0 8px 20px rgba(2,6,23,0.45);
 }
 
 /* -------------------------------
