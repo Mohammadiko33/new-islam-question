@@ -514,6 +514,12 @@ const posts = [{
     link: "main/routes/where-is-the-Qiblah/response.html",
     cover: "main/routes/where-is-the-Qiblah/cover.jpg"
   },
+  {
+    id: 79,
+    title: "فرمان بگیرید بکشید تقسیم کنید جنگ قادسیه",
+    link: "main/routes/khosrow-ghadesiea/response.html",
+    cover: "main/routes/khosrow-ghadesiea/cover.jpg"
+  },
 ];
 
 const container = document.querySelector(".container");
