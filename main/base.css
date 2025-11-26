@@ -55,9 +55,12 @@ html {
   --green: #1dd3a7;
   --red: #ff7b7b;
   --blue-link: #5fb0ff;
-  /* Extra-box colors in dark mode set from user-provided OKLCH values */
-  --extra-bg: oklch(25.7% 0.09 281.288);
-  --extra-text: oklch(91.7% 0.08 205.041);
+  /* Extra-box colors in dark mode */
+  --extra-main: #1dd3a7;        /* رنگ اصلی مورد علاقه‌ت */
+  --extra-bg: #0f1519;          /* پس‌زمینه‌ی خیلی تمیز و مات */
+  --extra-border: #1dd3a7;      /* همان رنگ اصلی بدون تغییر */
+  --extra-text: #e9fdf7;        /* سفید-سبز خیلی لطیف */
+  --extra-muted: #b7dcd1;       /* خاکستری سبز ملایم */
   --gray-border: rgba(255,255,255,0.06);
   --shadow-8: rgba(2,6,23,0.6);
 }
@@ -112,31 +115,74 @@ html {
 .extra-box li {
   margin: 0.45rem 0;
   color: color-mix(in srgb, var(--extra-text) 65%, #000 35%);
+  /* keep a small gap for a leading dot/bullet on RTL (right side) */
+  padding-right: 1.2rem;
+  position: relative;
 }
 
 /* Dark mode tweaks: subtler, Tailwind-like indigo/sky tones */
 [data-theme="dark"] {
-  --extra-bg: rgba(15, 23, 42, 0.42); /* deep, slightly bluish */
-  --extra-border: rgba(99,102,241,0.18); /* soft indigo */
-  --extra-text: #cfe8ff;
+  --extra-bg: rgba(12,18,30,0.56); /* deep, cool navy (kept for specificity) */
+  --extra-border: rgba(99,102,241,0.18);
+  --extra-text: #dff6ff;
 }
 
+/* باکس اصلی */
+/* باکس اصلی نکات تکمیلی */
+/* باکس نکات تکمیلی */
 [data-theme="dark"] .extra-box {
-  /* use the user-provided extra-bg color for dark mode for consistent contrast */
-  background: var(--extra-bg);
-  border-left-color: var(--extra-border);
-  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-  backdrop-filter: blur(6px) saturate(120%);
+  background: #134e45; /* فقط پس‌زمینه سبز-آبی تیره */
+  border-left: 6px solid #1dd3a7;
+  padding: 22px 24px 22px 72px;
+  border-radius: 14px;
+
+  /* سایه کل باکس */
+  box-shadow: 0 0 34px rgba(0, 0, 0, 0.42);
 }
 
+/* تیتر — رنگ روشن یخی، نه سبز-آبی */
+[data-theme="dark"] .extra-box h2 {
+  color: #ecfaff; 
+}
+
+/* متن‌ها — خاکستری یخی ملایم، بدون تکرار رنگ بک‌گراند */
+[data-theme="dark"] .extra-box li {
+  color: #cfe8e4;
+}
+
+/* بولت‌ها – accent */
+[data-theme="dark"] .extra-box li::before {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 0.85rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1dd3a7;
+}
+
+/* دایره چراغ */
 [data-theme="dark"] .extra-box::before {
-  background: linear-gradient(135deg, rgba(99,102,241,0.9), rgba(79,143,255,0.9));
-  color: var(--background);
-  box-shadow: 0 8px 20px rgba(2,6,23,0.45);
+  content: "💡";
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #1dd3a7;
+  color: #083c33;
+  font-size: 1.1rem;
+  box-shadow: 0 0 12px rgba(29, 211, 167, 0.6);
 }
 
+/* Title */
 [data-theme="dark"] .extra-box h2 {
   color: var(--extra-text);
+  text-shadow: 0 2px 10px rgba(80, 140, 255, 0.18);
 }
 
 *,
@@ -394,20 +440,6 @@ p {
 .extra-box li {
   margin: 0.4rem 0;
   color: color-mix(in srgb, var(--extra-text) 72%, var(--text) 28%);
-}
-
-/* Dark mode overrides for extra-box to keep contrast pleasant */
-[data-theme="dark"] .extra-box {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-left-color: color-mix(in srgb, var(--extra-border) 40%, rgba(255,255,255,0.02) 60%);
-  box-shadow: 0 10px 30px rgba(2,6,23,0.45);
-  backdrop-filter: blur(6px) saturate(120%);
-}
-
-[data-theme="dark"] .extra-box::before {
-  background: linear-gradient(135deg, rgba(245,184,0,0.95), rgba(255,206,84,0.95));
-  color: var(--background);
-  box-shadow: 0 8px 20px rgba(2,6,23,0.45);
 }
 
 /* -------------------------------
